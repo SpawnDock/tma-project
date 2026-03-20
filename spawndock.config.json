@@ -1,0 +1,12 @@
+{
+  "templateId": "nextjs-template",
+  "projectId": "",
+  "projectSlug": "tma-project",
+  "projectName": "TMA Project",
+  "controlPlaneUrl": "",
+  "previewOrigin": "",
+  "previewPath": "",
+  "previewHost": "",
+  "localPort": 3000,
+  "mcpServerUrl": ""
+}
