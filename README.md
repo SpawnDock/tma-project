@@ -16,7 +16,7 @@ Install dependencies with `pnpm install`.
 If you are using SpawnDock, bootstrap the project with:
 
 ```bash
-npx @spawn-dock/create-spawn-dock --token <pairing-token> [project-dir]
+npx @spawn-dock/create --token <pairing-token> [project-dir]
 ```
 
 ## Scripts
