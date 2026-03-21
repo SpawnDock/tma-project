@@ -30,15 +30,17 @@ npx @spawn-dock/create --token <pairing-token> [project-dir]
 ## SpawnDock Flow
 
 The starter expects a bootstrap step that writes `spawndock.config.json` and
-`spawndock.dev-tunnel.json` before `pnpm run dev` is used. The bootstrap CLI
-also writes `opencode.json` so the generated project is ready to connect to
-`@spawn-dock/mcp` via `/mcp/sse`.
+`spawndock.dev-tunnel.json` before `pnpm run dev` is used. The template itself
+already ships agent MCP configs and a local wrapper so the generated project is
+ready to connect to `@spawn-dock/mcp` via `/mcp/sse`.
 
 ## Local Config
 
 - `spawndock.config.json` contains preview/runtime data for the app.
 - `spawndock.dev-tunnel.json` contains tunnel connection data.
-- `opencode.json` is generated during bootstrap for the local MCP client.
+- `opencode.json` is built into the template for OpenCode.
+- `.mcp.json` is built into the template for Claude Code.
+- `spawndock/mcp.mjs` resolves `mcpServerUrl` from `spawndock.config.json`.
 - `public/tonconnect-manifest.json` is replaced during bootstrap with the
   correct preview URL.
 
