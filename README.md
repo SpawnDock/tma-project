@@ -13,6 +13,12 @@ local preview support.
 
 Install dependencies with `pnpm install`.
 
+If you are using SpawnDock, bootstrap the project with:
+
+```bash
+npx create-spawn-dock --token <pairing-token> [project-dir]
+```
+
 ## Scripts
 
 - `pnpm run dev` starts Next.js and the SpawnDock tunnel together.
@@ -26,7 +32,7 @@ Install dependencies with `pnpm install`.
 The starter expects a bootstrap step that writes `spawndock.config.json` and
 `spawndock.dev-tunnel.json` before `pnpm run dev` is used. The bootstrap CLI
 also writes `opencode.json` so the generated project is ready to connect to
-`@spawn-dock/mcp`.
+`@spawn-dock/mcp` via `/mcp/sse`.
 
 ## Local Config
 
