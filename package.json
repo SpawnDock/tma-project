@@ -8,6 +8,7 @@
     "dev:tunnel": "node ./spawndock/tunnel.mjs",
     "dev:https": "next dev --experimental-https",
     "build": "next build",
+    "publish:github-pages": "node ./spawndock/publish.mjs",
     "start": "next start",
     "lint": "next lint"
   },
@@ -24,6 +25,7 @@
     "ws": "^8.19.0"
   },
   "devDependencies": {
+    "@spawn-dock/dev-tunnel": "latest",
     "@spawn-dock/mcp": "latest",
     "@tailwindcss/postcss": "^4.1.17",
     "@types/node": "^24",

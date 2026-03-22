@@ -25,6 +25,7 @@ npx @spawn-dock/create --token <pairing-token> [project-dir]
 - `pnpm run dev:next` starts only the local Next.js server.
 - `pnpm run dev:tunnel` starts only the SpawnDock tunnel client.
 - `pnpm run build` builds the starter for production.
+- `pnpm run publish:github-pages` exports the app and deploys it to GitHub Pages.
 - `pnpm run start` starts the production Next.js server.
 
 ## SpawnDock Flow
