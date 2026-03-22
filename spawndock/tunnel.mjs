@@ -1,6 +1,6 @@
 import { spawn } from "node:child_process"
 
-const child = spawn("node", ["./spawndock/spawn-dock-tunnel.mjs", "dev"], {
+const child = spawn("pnpm", ["exec", "spawndock-tunnel"], {
   cwd: process.cwd(),
   env: process.env,
   stdio: "inherit"

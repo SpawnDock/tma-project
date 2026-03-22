@@ -20,16 +20,22 @@ const serverActionOrigins = parseAllowedOrigins(
 )
 const normalizedPreviewPath =
   previewPath && previewPath.length > 0 ? previewPath : undefined
+const githubPagesExport = process.env.SPAWNDOCK_GITHUB_PAGES_EXPORT === "1"
 
 const nextConfig: NextConfig = {
   allowedDevOrigins,
   assetPrefix: normalizedPreviewPath,
   basePath: normalizedPreviewPath,
-  experimental: {
-    serverActions: {
-      allowedOrigins: serverActionOrigins
-    }
-  }
+  images: githubPagesExport ? { unoptimized: true } : undefined,
+  output: githubPagesExport ? "export" : undefined,
+  trailingSlash: githubPagesExport,
+  experimental: githubPagesExport
+    ? undefined
+    : {
+        serverActions: {
+          allowedOrigins: serverActionOrigins
+        }
+      }
 }
 
 export default withNextIntl(nextConfig)
