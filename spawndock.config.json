@@ -8,5 +8,6 @@
   "previewPath": "",
   "previewHost": "",
   "localPort": 3000,
-  "mcpServerUrl": ""
+  "mcpServerUrl": "",
+  "mcpApiKey": ""
 }
