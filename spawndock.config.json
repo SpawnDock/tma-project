@@ -5,6 +5,7 @@
   "projectName": "TMA Project",
   "controlPlaneUrl": "",
   "previewOrigin": "",
+  "telegramMiniAppUrl": "",
   "previewPath": "",
   "previewHost": "",
   "localPort": 3000,
