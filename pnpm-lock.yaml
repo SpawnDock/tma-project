@@ -43,8 +43,8 @@ importers:
         version: 8.19.0
     devDependencies:
       '@spawn-dock/dev-tunnel':
-        specifier: 1.0.8
-        version: 1.0.8
+        specifier: 1.0.9
+        version: 1.0.9
       '@spawn-dock/mcp':
         specifier: latest
         version: 1.0.1
@@ -686,8 +686,8 @@ packages:
   '@schummar/icu-type-parser@1.21.5':
     resolution: {integrity: sha512-bXHSaW5jRTmke9Vd0h5P7BtWZG9Znqb8gSDxZnxaGSJnGwPLDPfS+3g0BKzeWqzgZPsIVZkM7m2tbo18cm5HBw==}
 
-  '@spawn-dock/dev-tunnel@1.0.8':
-    resolution: {integrity: sha512-jy3QrHLBwnVEtQ8oZ4yedcQOveWpo0//CBV8wYRk7Z+Cy2Skm+R9QI22AEKLjYW20USb5jdSEFmx3HU58u3Bew==}
+  '@spawn-dock/dev-tunnel@1.0.9':
+    resolution: {integrity: sha512-DM8A4GaZwQs/a5EcSaGskk9rqobZ1TxlrZ9wRLIVxYg8zRasHmj8ddrip9QuZGPiJ/b5m/1uqShRNbA2bymvqg==}
     hasBin: true
 
   '@spawn-dock/mcp@1.0.1':
@@ -3484,7 +3484,7 @@ snapshots:
 
   '@schummar/icu-type-parser@1.21.5': {}
 
-  '@spawn-dock/dev-tunnel@1.0.8':
+  '@spawn-dock/dev-tunnel@1.0.9':
     dependencies:
       ws: 8.19.0
     transitivePeerDependencies:
