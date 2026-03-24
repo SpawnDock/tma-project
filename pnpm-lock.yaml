@@ -42,9 +42,6 @@ importers:
         specifier: ^8.19.0
         version: 8.19.0
     devDependencies:
-      '@spawn-dock/cli':
-        specifier: 0.2.0
-        version: 0.2.0
       '@spawn-dock/dev-tunnel':
         specifier: 1.0.9
         version: 1.0.9
@@ -688,10 +685,6 @@ packages:
 
   '@schummar/icu-type-parser@1.21.5':
     resolution: {integrity: sha512-bXHSaW5jRTmke9Vd0h5P7BtWZG9Znqb8gSDxZnxaGSJnGwPLDPfS+3g0BKzeWqzgZPsIVZkM7m2tbo18cm5HBw==}
-
-  '@spawn-dock/cli@0.2.0':
-    resolution: {integrity: sha512-sAGH6AloF6lv1q/SvClwA9ojZv8YGN9MRf9YUC+ak+HcoWRUg5z+iv7qn4QXuyx60W2lL1rPnhivBzDSIa7wHw==}
-    hasBin: true
 
   '@spawn-dock/dev-tunnel@1.0.9':
     resolution: {integrity: sha512-DM8A4GaZwQs/a5EcSaGskk9rqobZ1TxlrZ9wRLIVxYg8zRasHmj8ddrip9QuZGPiJ/b5m/1uqShRNbA2bymvqg==}
@@ -3490,8 +3483,6 @@ snapshots:
   '@rtsao/scc@1.1.0': {}
 
   '@schummar/icu-type-parser@1.21.5': {}
-
-  '@spawn-dock/cli@0.2.0': {}
 
   '@spawn-dock/dev-tunnel@1.0.9':
     dependencies:
