@@ -1,9 +1,11 @@
 {
   "name": "tma-project",
-  "version": "0.1.0",
+  "version": "1.0.0-beta.1",
   "private": true,
   "scripts": {
     "dev": "node ./spawndock/dev.mjs",
+    "agent": "spawn-dock agent",
+    "agent:session": "spawn-dock session",
     "dev:next": "node ./spawndock/next.mjs",
     "dev:tunnel": "node ./spawndock/tunnel.mjs",
     "dev:https": "next dev --experimental-https",
@@ -26,8 +28,9 @@
     "ws": "^8.19.0"
   },
   "devDependencies": {
+    "@spawn-dock/cli": "0.2.0",
     "@spawn-dock/dev-tunnel": "1.0.9",
-    "@spawn-dock/mcp": "latest",
+    "@spawn-dock/mcp": "1.0.5",
     "@tailwindcss/postcss": "^4.1.17",
     "@types/node": "^24",
     "@types/react": "^19",

@@ -21,12 +21,13 @@ npx @spawn-dock/create --token <pairing-token> [project-dir]
 
 ## Scripts
 
-- `pnpm run dev` starts Next.js and the SpawnDock tunnel together.
+- `pnpm run dev` starts Next.js and the SpawnDock tunnel together (no AI agent).
   The tunnel startup logs also print the Telegram Mini App deep link when the
   bootstrapped `spawndock.config.json` includes it.
+- `pnpm run agent` starts Next.js, the tunnel, then the SpawnDock agent launcher (`@spawn-dock/cli`).
 - `pnpm run dev:next` starts only the local Next.js server.
 - `pnpm run dev:tunnel` starts only the SpawnDock tunnel client.
-- `pnpm run agent:session` starts the SpawnDock AI runtime launcher inside the bootstrapped project.
+- `pnpm run agent:session` starts only the SpawnDock AI runtime launcher (`spawn-dock session`, no dev server).
 - `pnpm run build` builds the starter for production.
 - `pnpm run publish:github-pages` exports the app and deploys it to GitHub Pages.
 - `pnpm run start` starts the production Next.js server.

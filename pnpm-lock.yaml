@@ -42,12 +42,15 @@ importers:
         specifier: ^8.19.0
         version: 8.19.0
     devDependencies:
+      '@spawn-dock/cli':
+        specifier: 0.2.0
+        version: 0.2.0
       '@spawn-dock/dev-tunnel':
         specifier: 1.0.9
         version: 1.0.9
       '@spawn-dock/mcp':
-        specifier: latest
-        version: 1.0.1
+        specifier: 1.0.5
+        version: 1.0.5
       '@tailwindcss/postcss':
         specifier: ^4.1.17
         version: 4.1.17
@@ -686,12 +689,16 @@ packages:
   '@schummar/icu-type-parser@1.21.5':
     resolution: {integrity: sha512-bXHSaW5jRTmke9Vd0h5P7BtWZG9Znqb8gSDxZnxaGSJnGwPLDPfS+3g0BKzeWqzgZPsIVZkM7m2tbo18cm5HBw==}
 
+  '@spawn-dock/cli@0.2.0':
+    resolution: {integrity: sha512-sAGH6AloF6lv1q/SvClwA9ojZv8YGN9MRf9YUC+ak+HcoWRUg5z+iv7qn4QXuyx60W2lL1rPnhivBzDSIa7wHw==}
+    hasBin: true
+
   '@spawn-dock/dev-tunnel@1.0.9':
     resolution: {integrity: sha512-DM8A4GaZwQs/a5EcSaGskk9rqobZ1TxlrZ9wRLIVxYg8zRasHmj8ddrip9QuZGPiJ/b5m/1uqShRNbA2bymvqg==}
     hasBin: true
 
-  '@spawn-dock/mcp@1.0.1':
-    resolution: {integrity: sha512-ANAYjpx9Dy1UuisdTNKNlhKpTiBBIiO9bob1rx60MP3AQNW7THqAvn5kRQZFbqEdtILGsj3e29FETq5egMXRPQ==}
+  '@spawn-dock/mcp@1.0.5':
+    resolution: {integrity: sha512-inT5qD7xEnZ/FdieJCmve8j4/cFJfAqXs5ydYQ6/vqWqyWScU/jvYXv4aM37KggpuQHo/Irf8SRGwT5SPHK4Tw==}
     engines: {node: '>=18'}
     hasBin: true
 
@@ -3484,6 +3491,8 @@ snapshots:
 
   '@schummar/icu-type-parser@1.21.5': {}
 
+  '@spawn-dock/cli@0.2.0': {}
+
   '@spawn-dock/dev-tunnel@1.0.9':
     dependencies:
       ws: 8.19.0
@@ -3491,7 +3500,7 @@ snapshots:
       - bufferutil
       - utf-8-validate
 
-  '@spawn-dock/mcp@1.0.1':
+  '@spawn-dock/mcp@1.0.5':
     dependencies:
       '@modelcontextprotocol/sdk': 1.27.1(zod@4.3.6)
       zod: 4.3.6
