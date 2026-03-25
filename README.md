@@ -37,6 +37,7 @@ npx -y @spawn-dock/create@beta --token <pairing-token> [project-dir]
 - `AGENTS.md` contains the base system instructions for AI agents working inside this template.
 - `CLAUDE.md` provides Claude Code project memory and points it to the local TMA knowledge skill.
 - `.agents/skills/tma-knowledge-search` contains the local Telegram Mini App / SpawnDock knowledge-search skill used by compatible agents.
+- That skill is Node-based and should be run with `node .agents/skills/tma-knowledge-search/scripts/search_tma_knowledge.mjs "<query>"` from the project root.
 - Agents should treat `pnpm run dev` as the main local flow because it starts both Next.js and the SpawnDock dev tunnel.
 - Use `pnpm run dev:next` only when you explicitly want the local app server without the tunnel.
 - SpawnDock bootstrap also mirrors the same skill into `~/.codex/skills/tma-knowledge-search` when preparing a local Codex setup.
