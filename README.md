@@ -32,6 +32,12 @@ npx -y @spawn-dock/create@beta --token <pairing-token> [project-dir]
 - `pnpm run publish:github-pages` exports the app and deploys it to GitHub Pages.
 - `pnpm run start` starts the production Next.js server.
 
+## Agent Guidance
+
+- `AGENTS.md` contains the base system instructions for AI agents working inside this template.
+- Agents should treat `pnpm run dev` as the main local flow because it starts both Next.js and the SpawnDock dev tunnel.
+- Use `pnpm run dev:next` only when you explicitly want the local app server without the tunnel.
+
 ## SpawnDock Flow
 
 The starter expects a bootstrap step that writes `spawndock.config.json` and
