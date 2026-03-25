@@ -32,6 +32,15 @@ npx -y @spawn-dock/create@beta --token <pairing-token> [project-dir]
 - `pnpm run publish:github-pages` exports the app and deploys it to GitHub Pages.
 - `pnpm run start` starts the production Next.js server.
 
+## Agent Guidance
+
+- `AGENTS.md` contains the base system instructions for AI agents working inside this template.
+- `CLAUDE.md` provides Claude Code project memory and points it to the local TMA knowledge skill.
+- `.agents/skills/tma-knowledge-search` contains the local Telegram Mini App / SpawnDock knowledge-search skill used by compatible agents.
+- Agents should treat `pnpm run dev` as the main local flow because it starts both Next.js and the SpawnDock dev tunnel.
+- Use `pnpm run dev:next` only when you explicitly want the local app server without the tunnel.
+- SpawnDock bootstrap also mirrors the same skill into `~/.codex/skills/tma-knowledge-search` when preparing a local Codex setup.
+
 ## SpawnDock Flow
 
 The starter expects a bootstrap step that writes `spawndock.config.json` and
@@ -42,7 +51,9 @@ ready to connect to `@spawn-dock/mcp` via `/mcp/sse`.
 ## Local Config
 
 - `spawndock.config.json` contains preview/runtime data for the app.
+- `spawndock.config.json` can also include `apiToken` for the TMA knowledge-search skill.
 - `spawndock.dev-tunnel.json` contains tunnel connection data.
+- `.env.local` can include `SPAWNDOCK_API_TOKEN` for the same knowledge-search access.
 - `opencode.json` is generated during bootstrap for OpenCode.
 - `.mcp.json` is generated during bootstrap for Claude Code.
 - `spawndock/mcp.mjs` resolves `mcpServerUrl` from `spawndock.config.json`.

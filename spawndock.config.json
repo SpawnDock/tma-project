@@ -10,5 +10,6 @@
   "previewHost": "",
   "localPort": 3000,
   "mcpServerUrl": "",
-  "mcpApiKey": ""
+  "mcpApiKey": "",
+  "apiToken": ""
 }
