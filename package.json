@@ -12,7 +12,7 @@
     "build": "next build",
     "publish:github-pages": "node ./spawndock/publish.mjs",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@telegram-apps/sdk": "^3.11.0",
@@ -30,6 +30,8 @@
   "devDependencies": {
     "@spawn-dock/dev-tunnel": "1.0.9",
     "@spawn-dock/mcp": "1.0.5",
+    "@prover-coder-ai/component-tagger": "^1.0.31",
+    "@prover-coder-ai/eslint-plugin-suggest-members": "^0.0.26",
     "@tailwindcss/postcss": "^4.1.17",
     "@types/node": "^24",
     "@types/react": "^19",
