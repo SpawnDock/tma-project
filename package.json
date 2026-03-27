@@ -11,7 +11,7 @@
     "dev:https": "next dev --experimental-https",
     "build": "next build",
     "test": "vitest run",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "tsc -p tsconfig.strict.json --noEmit",
     "publish:github-pages": "node ./spawndock/publish.mjs",
     "start": "next start",
     "lint": "eslint ."
@@ -30,6 +30,7 @@
     "ws": "^8.19.0"
   },
   "devDependencies": {
+    "@effect/language-service": "^0.84.1",
     "@prover-coder-ai/component-tagger": "^1.0.31",
     "@prover-coder-ai/eslint-plugin-suggest-members": "^0.0.26",
     "@spawn-dock/dev-tunnel": "1.0.9",

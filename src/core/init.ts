@@ -6,11 +6,13 @@ import {
   miniApp,
   viewport,
   mockTelegramEnv,
-  type ThemeParams,
+  type EventPayload,
   themeParams,
   retrieveLaunchParams,
   emitEvent,
 } from '@tma.js/sdk-react';
+
+type ThemeEventParams = EventPayload<'theme_changed'>['theme_params'];
 
 /**
  * Initializes the application and configures its dependencies.
@@ -39,16 +41,15 @@ export async function init(options: {
     mockTelegramEnv({
       onEvent(event, next) {
         if (event.name === 'web_app_request_theme') {
-          let tp: Partial<ThemeParams> = {};
+          let tp: ThemeEventParams = {};
           if (firstThemeSent) {
-            const state = themeParams.state;
-            tp = state as Partial<ThemeParams>;
+            tp = themeParams.state();
           } else {
             firstThemeSent = true;
             const lp = retrieveLaunchParams();
-            tp = (lp.tgWebAppThemeParams || {}) as Partial<ThemeParams>;
+            tp = (lp.tgWebAppThemeParams || {}) as ThemeEventParams;
           }
-          return emitEvent('theme_changed', { theme_params: tp as any });
+          return emitEvent('theme_changed', { theme_params: tp });
         }
 
         if (event.name === 'web_app_request_safe_area') {
@@ -72,7 +73,7 @@ export async function init(options: {
   try {
     miniApp.mount();
     themeParams.bindCssVars();
-  } catch (e) {
+  } catch {
     // miniApp not available
   }
 
@@ -80,7 +81,7 @@ export async function init(options: {
     viewport.mount().then(() => {
       viewport.bindCssVars();
     });
-  } catch (e) {
+  } catch {
     // viewport not available
   }
 }
