@@ -24,12 +24,22 @@ jobs:
         uses: ./.github/actions/setup
       - run: pnpm build
 
-  types:
-    name: Types
+  lint:
+    name: Lint
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v6
       - name: Install dependencies
         uses: ./.github/actions/setup
-      - run: pnpm exec tsc --noEmit
+      - run: pnpm lint
+
+  typecheck:
+    name: Typecheck
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+      - name: Install dependencies
+        uses: ./.github/actions/setup
+      - run: pnpm typecheck
