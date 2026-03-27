@@ -34,6 +34,16 @@ jobs:
         uses: ./.github/actions/setup
       - run: pnpm lint
 
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v6
+      - name: Install dependencies
+        uses: ./.github/actions/setup
+      - run: pnpm test
+
   typecheck:
     name: Typecheck
     runs-on: ubuntu-latest
