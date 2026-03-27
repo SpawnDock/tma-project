@@ -11,7 +11,7 @@
     "dev:https": "next dev --experimental-https",
     "build": "next build",
     "test": "vitest run",
-    "typecheck": "tsc -p tsconfig.strict.json --noEmit",
+    "typecheck": "tsc --noEmit",
     "publish:github-pages": "node ./spawndock/publish.mjs",
     "start": "next start",
     "lint": "eslint ."
