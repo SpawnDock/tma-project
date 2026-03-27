@@ -10,6 +10,7 @@
     "dev:tunnel": "node ./spawndock/tunnel.mjs",
     "dev:https": "next dev --experimental-https",
     "build": "next build",
+    "typecheck": "tsc --noEmit",
     "publish:github-pages": "node ./spawndock/publish.mjs",
     "start": "next start",
     "lint": "eslint ."
