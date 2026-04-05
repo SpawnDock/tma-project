@@ -11,7 +11,7 @@ mockEnv().then(() => {
     const { tgWebAppPlatform: platform } = launchParams;
     const debug =
       (launchParams.tgWebAppStartParam || '').includes('debug') ||
-      process.env.NODE_ENV === 'development';
+      process.env['NODE_ENV'] === 'development';
 
     // Configure all application dependencies.
     init({

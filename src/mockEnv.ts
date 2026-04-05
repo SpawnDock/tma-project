@@ -1,9 +1,11 @@
-import { mockTelegramEnv, isTMA, emitEvent } from '@tma.js/sdk-react';
+import { mockTelegramEnv, isTMA, emitEvent, type EventPayload } from '@tma.js/sdk-react';
+
+type ThemeEventParams = EventPayload<'theme_changed'>['theme_params'];
 
 // It is important, to mock the environment only for development purposes. When building the
 // application, the code inside will be tree-shaken, so you will not see it in your final bundle.
 export async function mockEnv(): Promise<void> {
-  return process.env.NODE_ENV !== 'development'
+  return process.env['NODE_ENV'] !== 'development'
   ? undefined
   : isTMA('complete').then((isTma) => {
     if (!isTma){ 
@@ -21,14 +23,14 @@ export async function mockEnv(): Promise<void> {
         section_header_text_color: '#6ab3f3',
         subtitle_text_color: '#708499',
         text_color: '#f5f5f5',
-      } as const;
+      } as const satisfies ThemeEventParams;
       const noInsets = { left: 0, top: 0, bottom: 0, right: 0 } as const;
   
       mockTelegramEnv({
         onEvent(e, next) {
           // Here you can write your own handlers for all known Telegram Mini Apps methods.
           if (e.name === 'web_app_request_theme') {
-            return emitEvent('theme_changed', { theme_params: themeParams as any });
+            return emitEvent('theme_changed', { theme_params: themeParams });
           }
           if (e.name === 'web_app_request_viewport') {
             return emitEvent('viewport_changed', {
